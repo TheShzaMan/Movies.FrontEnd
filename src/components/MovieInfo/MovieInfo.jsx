@@ -1,15 +1,15 @@
-const MovieInfo = ({ title, runningTime, genre }) => {
+const MovieInfo = ({ movieObj }) => {
 	return (
 		<div>
-			<h4>{title}</h4>
-			<div>
+			<h4>{movieObj.title}</h4>
+			<div className="flex-item">
 				<div>
 					<span>Running Time</span>
-					<span>{runningTime}</span>
+					<span>{movieObj.runningTime}</span>
 				</div>
 				<div>
 					<span>Genre</span>
-					<span>{genre}</span>
+					<span></span>
 				</div>
 			</div>
 		</div>
