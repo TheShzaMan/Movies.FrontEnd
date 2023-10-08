@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-const NewMovieForm = ({}) => {
-	const [title, setTitle] = useState("");
-	const [runningTime, setRunningTime] = useState("");
-	const [genre, setGenre] = useState("");
+const NewMovieForm = ({ onNewMovie }) => {
+	const [title, setTitle] = useState("")
+	const [runningTime, setRunningTime] = useState("")
+	const [genre, setGenre] = useState("")
 
 	const handleSubmit = (e) => {
-		e.preventDefault();
+		e.preventDefault()
 		const formData = {
 			title,
 			runningTime,
 			genre,
-		};
-		console.log(formData);
-	};
+		}
+		onNewMovie(formData)
+	}
 
 	return (
-		<form onSubmit={handleSubmit} className="flex-item">
+		<form onSubmit={handleSubmit} className='flex-item'>
 			<h4>Add Movie</h4>
 			<div>
 				<label>Title</label>
@@ -39,9 +39,9 @@ const NewMovieForm = ({}) => {
 					onChange={(e) => setGenre(e.target.value)}
 				/>
 			</div>
-			<button type="submit">Add Movie</button>
+			<button type='submit'>Add Movie</button>
 		</form>
-	);
-};
+	)
+}
 
-export default NewMovieForm;
+export default NewMovieForm
