@@ -11,7 +11,7 @@ const MovieList = ({ movies = [], activeIndex, setActiveIndex }) => {
 		/>
 	))
 	return (
-		<div className='flex-'>
+		<div className='flex-item'>
 			<h4>My Movies</h4>
 			<div>{movieItems}</div>
 		</div>
